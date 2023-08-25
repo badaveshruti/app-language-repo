@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/download_forms"
+        android:title="@string/downloadforms"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_offline"
+        android:title="@string/offline_map"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_delete"
+        android:title="@string/deleteall_data"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/add_location"
+        android:icon="@drawable/plus"
+        android:orderInCategory="101"
+        android:title="@string/add_Location"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/filefolder"
+        android:icon="@drawable/ic_folder_white"
+        android:orderInCategory="102"
+        android:title="@string/FileFolder"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/send_db"
+        android:title="@string/senddb"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/app_preferences"
+        android:title="@string/app_pref"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/done"
+        android:title="@string/MapDone"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/logout"
+        android:title="@string/Logout"
+        android:visible="false"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_download_forms"
+            android:icon="@drawable/ic_download_data"
+            android:title="@string/forced_sync" />
+
+        <item
+            android:id="@+id/nav_download_all_event_data"
+            android:icon="@drawable/ic_download_data"
+            android:title="@string/download_all_events_data" />
+
+        <item
+            android:id="@+id/assign_project"
+            android:icon="@drawable/assign_project"
+            android:title="@string/assign_projects"
+            android:visible="false" />
+
+        <item
+            android:id="@+id/nav_hospital"
+            android:icon="@drawable/ic_hospital_rounded"
+            android:title="@string/hospitals" />
+
+        <item
+            android:id="@+id/nav_update_app"
+            android:icon="@drawable/update_app_icon"
+            android:title="@string/update" />
+
+        <item
+            android:id="@+id/nav_send_db"
+            android:icon="@drawable/send_db"
+            android:title="@string/send_data_to_support" />
+
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/notification_bell"
+            android:title="@string/notifications"
+            app:actionLayout="@layout/view_alertsbadge" />
+
+        <item
+            android:id="@+id/enable_signature"
+            android:icon="@drawable/signature_icon"
+            android:title="@string/capture_sign"
+            app:actionLayout="@layout/widget_checkbox" />
+
+        <item
+            android:id="@+id/menu_enable_split_screen"
+            android:icon="@drawable/ic_split_screen"
+            android:title="@string/enable_split_screen"
+            app:actionLayout="@layout/widget_checkbox" />
+
+        <item
+            android:id="@+id/menu_faster_forms"
+            android:icon="@drawable/ic_task_list"
+            android:title="@string/faster_forms"
+            app:actionLayout="@layout/widget_checkbox" />
+
+        <item
+            android:id="@+id/menu_show_info"
+            android:icon="@drawable/ic_info"
+            android:title="@string/show_info_btns"
+            app:actionLayout="@layout/widget_checkbox" />
+
+        <item
+            android:id="@+id/export_all_data_csv"
+            android:icon="@drawable/ic_csv"
+            android:title="@string/export_all_data_to_csv" />
+
+        <item
+            android:id="@+id/export_today_csv_data"
+            android:icon="@drawable/ic_csv"
+            android:title="@string/export_today_s_data_to_csv" />
+
+        <item
+            android:id="@+id/nav_reset_app"
+            android:icon="@drawable/reset_app_icon"
+            android:title="@string/erase_data"
+            android:visible="false" />
+
+        <item
+            android:id="@+id/nav_copy_db"
+            android:icon="@drawable/send_db"
+            android:title="@string/load_local_db" />
+
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/help"
+            android:title="@string/guide"
+            android:visible="false" />
+
+        <item
+            android:id="@+id/nav_contact_support"
+            android:icon="@drawable/ic_contact_support"
+            android:title="@string/contact_support" />
+
+        <item
+            android:id="@+id/nav_chat_support"
+            android:icon="@drawable/ic_chat_bubble"
+            android:title="@string/chat_support" />
+
+        <item
+            android:id="@+id/nav_signout"
+            android:icon="@drawable/signout_icon"
+            android:title="@string/sign_out" />
+    </group>
+</menu>

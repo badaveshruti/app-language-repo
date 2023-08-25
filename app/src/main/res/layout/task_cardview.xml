@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:baselineAligned="false"
+    android:padding="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="5sp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="3dp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+
+                <TextView
+                    android:id="@+id/txtPlanname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="Plan name"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/qnopy_teal"
+                    android:textColorHint="@color/grey_color_chooser"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <TextView
+                    android:id="@+id/txtviewc2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="No.of Tasks"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:text=":"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/tasksnumtxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.00"
+                    android:hint="Number of Tasks"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColorHint="@color/grey_color_chooser" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <TextView
+                    android:id="@+id/txtviewc5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Site Name"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:text=":"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/txtSitename"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Site name"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColorHint="@color/grey_color_chooser" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <TextView
+                    android:id="@+id/txtviewc4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Form Name"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:text=":"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/txtformname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="ParentApp Name"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColorHint="@color/grey_color_chooser" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <TextView
+                    android:id="@+id/txtviewc3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Due date"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/color_chooser_red1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:text=":"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/duedatetext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.00"
+                    android:hint="Due Date"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/color_chooser_red1"
+                    android:textColorHint="@color/grey_color_chooser" />
+
+                <ImageButton
+                    android:id="@+id/navigatebtn"
+                    android:layout_width="33dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@drawable/arrow_right_disabled"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:layout_marginTop="3dp"
+             android:padding="3dp"
+             android:weightSum="1">
+ -->
+            <!--  <TextView
+                  android:id="@+id/detailstext"
+                  android:layout_width="100dp"
+                  android:layout_height="wrap_content"
+                  android:text="See Details"
+                  android:layout_marginTop="10dp"
+                  android:textColor="@color/qnopy_teal"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  />-->
+
+
+            <!--<Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:background="@color/qnopy_teal"
+                android:text="GO"
+                android:textColor="@color/white" />-->
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

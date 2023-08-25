@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type">
+            <title>A simple, clean, and responsive HTML invoice template</title>
+            <style>
+                .invoice-box{
+                    max-width:800px;
+                    margin:auto;
+                    padding:30px;
+                    border:1px solid #eee;
+                    box-shadow:0 0 10px rgba(0, 0, 0, .15); 
+                    font-size:16px;
+                    line-height:24px;
+                    font-family:'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+                    color:#555;
+                }
+				table {width: 100%}
+				.w30p {width: 30%;}
+				.w20p {width: 20%;}
+				.w25p {width: 25%;}
+				.w70p {width: 70%;}
+				.text-center{text-align: center}
+				.mainHeader{color: #6169ce;font-size: 18px;font-weight: 500}
+				.subHeader{color: #000;font-size: 14px;}
+				.header-text {border : 2px solid #ddd;margin-bottom: 15px;}
+				.header-text h2{color: #6169ce;font-size: 18px;font-weight: 500;margin-bottom: 2px;}
+				table.data-tables tr td{padding: 3px 10px;font-size: 14px;}
+				table.data-tables tr td:nth-child(2),
+				table.data-tables tr td:nth-child(4){border-bottom: 1px solid #ddd}
+				.label-head{padding-left: 15px;}
+				table.para-tables,
+				table.para-tables th,
+				table.para-tables td{
+					border: 1px solid #ddd;
+					border-collapse: collapse;
+					padding: 3px;
+					font-size: 14px;
+				}
+				table.para-tables th{background-color: #f5f5f5;}
+            </style>
+            </head>
+    <body>
+        <div class="invoice-box">
+            <table>
+			  <tr>
+				<td class="w30p text-center">
+					Logo Here	
+				</td>
+				<td class="w70p text-center">
+				  	<span class="mainHeader">Ground Monitoring Field Data Forms</span><br>
+					<span class="subHeader">Site:Balboa</span>
+				</td>
+			  </tr>
+			</table>
+			
+			<div class="header-text">
+				<h2>Balboa_4132</h2>
+			</div>
+			
+			<table class="data-tables">
+			  <tr>
+				<td class="w20p">Date</td>
+				<td class="w30p">09/27/2017</td>
+				<td class="w20p">Date</td>
+				<td class="w30p"></td>
+			  </tr>
+				<tr>
+				<td class="w20p">Weather Conditions</td>
+				<td class="w30p">09/27/2017</td>
+				<td class="w20p">Weather Condition</td>
+				<td class="w30p"></td>
+			  </tr>
+			</table>
+			
+			<div class="header-text">
+				<h2>Field Parameters</h2>
+			</div>
+			
+			<table class="para-tables">
+				<tr>
+					<th>Firstname</th>
+					<th>Lastname</th> 
+					<th>City</th>
+					<th>Age</th>
+					<th>Address</th>
+					<th>Latitude</th>
+					<th>Longitude</th>
+				 </tr>
+				  <tr>
+					<td>Date</td>
+					<td>09/27/2017</td>
+					<td>Pune</td>
+					<td>27</td>
+					<td>Pune</td>
+					<td>27.000</td>
+					<td>73.0007867</td>
+				  </tr>
+				<tr>
+					<td>Date</td>
+					<td>09/27/2017</td>
+					<td>Pune</td>
+					<td>28</td>
+					<td>Nashik</td>
+					<td>24.000</td>
+					<td>73.0007867</td>
+				  </tr>
+			</table>
+			
+			
+        </div>
+        
+    </body>
+</html>

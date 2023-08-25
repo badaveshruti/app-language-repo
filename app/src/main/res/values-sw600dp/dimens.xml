@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="site_title_size">18sp</dimen>
+    <dimen name="list_item_size">20sp</dimen>
+    <dimen name="activity_mobilecard_text_size">15sp</dimen>
+    <dimen name="login_container">50dp</dimen>
+
+    <dimen name="sign_in_button_width">400dp</dimen>
+    <dimen name="sub_divider_margin">7dp</dimen>
+
+    <dimen name="margin_bottom">50sp</dimen>
+    <dimen name="margin_left">150sp</dimen>
+    <dimen name="margin_right">150sp</dimen>
+    <dimen name="margin_top">50dp</dimen>
+    <dimen name="margin_logo_top">150sp</dimen>
+    <dimen name="margin_text_top">40sp</dimen>
+    <dimen name="margin_bottom_button">220sp</dimen>
+
+    <dimen name="intro_textsize">30dp</dimen>
+    <dimen name="intro_textdetail">20dp</dimen>
+    <dimen name="padding">30sp</dimen>
+    <dimen name="submittals_container">45dp</dimen>
+    <dimen name="submittals_container_margin">1sp</dimen>
+    <dimen name="padding_rv_child_apps">260dp</dimen>
+
+</resources>

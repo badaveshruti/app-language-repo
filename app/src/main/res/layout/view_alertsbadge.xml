@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_alert_red_circle"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_gravity="center"
+    android:padding="5dp"
+    android:background="@drawable/redcircle">
+
+    <!--<ImageView-->
+    <!--android:layout_width="@dimen/menu_item_icon_size"-->
+    <!--android:layout_height="@dimen/menu_item_icon_size"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:src="@drawable/ic_warning_white_24dp"/>-->
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/view_alert_red_circle"-->
+    <!--android:layout_width="14dp"-->
+    <!--android:layout_height="14dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:background="@drawable/redcircle"-->
+    <!--&gt;-->
+
+    <TextView
+        android:id="@+id/view_alert_count_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:text="0" />
+
+<!--</FrameLayout>-->
+
+    </FrameLayout>

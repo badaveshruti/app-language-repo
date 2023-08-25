@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivFeed"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="to show feed image"
+        android:padding="2dp"
+        app:civ_border_color="@color/event_start_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvEventName"
+        app:srcCompat="@drawable/ic_circle_event"
+        app:tint="@color/event_start_blue" />
+
+    <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+        android:id="@+id/tvEventName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="test name"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivFeed"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="moment ago"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/ivFeed"
+        app:layout_constraintTop_toBottomOf="@+id/tvEventName" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvPostText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:padding="8dp"
+        android:text="Test post text"
+        android:textColor="@color/black_faint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pagerFeed"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+        android:contentDescription="to show feed images"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPostText" />
+
+    <ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
+        android:id="@+id/circleIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagerFeed"
+        app:spi_dotSelectedColor="@color/event_start_blue" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewCounter2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="2000"
+            android:textColor="@color/qnopy_teal"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/card_notetxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewCounter2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/textinputborder"
+            android:ems="10"
+            android:hint="@string/addText"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:maxLength="@integer/max_character_count_limit"
+            android:maxLines="10"
+            android:padding="10dp"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:id="@+id/textViewError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_notetxt"
+            android:layout_marginLeft="3dp"
+            android:padding="2dp"
+            android:text="@string/counter_alert"
+            android:textColor="@color/alert_red"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <qnopy.com.qnopyandroid.customView.CustomButton
+        android:id="@+id/post_note_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/qnopy_teal"
+        android:text="POST"
+        android:textColor="@color/white" />
+
+</LinearLayout>

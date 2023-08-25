@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="qnopy.com.qnopyandroid.ui.locations.LocationAttributeActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSearchAttribute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="2dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <ImageView
+            android:id="@+id/imageViewAttributeSearch"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:paddingTop="2dp"
+            android:src="@mipmap/search_icon" />
+
+        <EditText
+            android:id="@+id/editTextSearchLocationusingAttributes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="3"
+            android:background="@color/transparent"
+            android:cursorVisible="true"
+            android:hint="@string/all_lower_case"
+            android:paddingLeft="26dp"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/textViewCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:gravity="end"
+            android:paddingRight="8dp"
+            android:text="@string/clear"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/clear_btn"
+        android:layout_marginTop="25dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/empty_attrinute_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:gravity="center"
+        android:text="@string/no_attribute"
+        android:textSize="@dimen/list_item_size"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/clear_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/save_filter"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

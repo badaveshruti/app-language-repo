@@ -1,0 +1,6 @@
+include ':CircleProgressView'
+include ':stickyheader'
+include ':calendarview'
+include ':pdfcreator'
+include ':imagepicker'
+include ':app', ':library', ':chiplibrary', ':badelfgps'

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_save"
+        app:showAsAction="always"
+        android:orderInCategory="103"
+        android:title="@string/save" />
+
+    <item
+        android:id="@+id/action_clear"
+        app:showAsAction="always"
+        android:orderInCategory="103"
+        android:title="@string/clear"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/action_cancel"
+        app:showAsAction="always"
+        android:orderInCategory="102"
+
+        android:title="@string/cancel" />
+</menu>

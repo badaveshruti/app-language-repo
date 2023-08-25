@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_form_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="3dp"
+    android:layout_marginLeft="3dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="3dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginBottom="2dp"
+    android:background="@drawable/bg_card"
+    android:padding="3dp">
+
+    <RelativeLayout
+        android:id="@+id/rlSetData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp">
+
+        <LinearLayout
+            android:id="@+id/setData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageButton
+                android:id="@+id/action_nav_left2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow_left_disabled"
+                android:title="@string/previous" />
+
+            <TextView
+                android:id="@+id/set_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textColor="@color/color_chooser_black"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/action_nav_right2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow_right_disabled"
+                android:title="Next" />
+        </LinearLayout>
+
+        <qnopy.com.qnopyandroid.customView.CustomTextView
+            android:id="@+id/tvCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="5dp"
+            android:text="Calculate"
+            android:textColor="@color/event_start_blue"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutForms"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlSetData">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollerid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true">
+
+            <LinearLayout
+                android:id="@+id/LocDetailList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" />
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvForms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="false"
+            android:background="@color/white"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_pb_vertical"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@+id/layoutForms"
+        android:layout_alignRight="@+id/layoutForms"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:visibility="gone"
+        app:fab_addButtonColorNormal="@color/qnopy_teal"
+        app:fab_addButtonColorPressed="@color/white_pressed"
+        app:fab_addButtonPlusIconColor="@color/btn_selected_bg"
+        app:fab_labelStyle="@style/menu_labels_style">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_new_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:fab_colorNormal="@color/qnopy_teal"
+            app:fab_colorPressed="@color/white_pressed"
+            app:fab_icon="@drawable/note_plus"
+            app:fab_size="mini"
+            app:fab_title="@string/new_reading_upper_case" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_delete_current_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:fab_colorNormal="@color/qnopy_teal"
+            app:fab_colorPressed="@color/white_pressed"
+            app:fab_icon="@drawable/delete"
+            app:fab_size="mini"
+            app:fab_title="@string/delete_set_upper_case" />
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+</RelativeLayout>

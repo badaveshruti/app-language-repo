@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_color_chooser"
+        android:orientation="vertical">
+
+        <qnopy.com.qnopyandroid.customView.CustomTextViewSemiBold
+            android:id="@+id/tvSendAsPdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/email_logs_as_pdf"
+            android:textColor="@color/black_faint" />
+
+        <qnopy.com.qnopyandroid.customView.CustomTextViewSemiBold
+            android:id="@+id/tvSendAsDoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/email_logs_as_doc"
+            android:textColor="@color/black_faint" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

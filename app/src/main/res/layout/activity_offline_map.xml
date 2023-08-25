@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<com.mapbox.mapboxsdk.maps.MapView-->
+        <!--android:id="@+id/mapView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/switchContainer" />-->
+
+
+    <!--<com.getbase.floatingactionbutton.FloatingActionsMenu-->
+        <!--android:id="@+id/multiple_actions"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginBottom="16dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--fab:fab_addButtonColorNormal="@color/qnopy_teal"-->
+        <!--fab:fab_addButtonColorPressed="@color/white_pressed"-->
+        <!--fab:fab_addButtonPlusIconColor="@color/btn_selected_bg"-->
+        <!--fab:fab_labelStyle="@style/menu_labels_style">-->
+
+        <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
+            <!--android:id="@+id/location_toggle_fab"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--fab:fab_colorNormal="@color/qnopy_teal"-->
+            <!--fab:fab_colorPressed="@color/white_pressed"-->
+            <!--fab:fab_icon="@mipmap/ic_location_searching_black_24dp"-->
+            <!--android:visibility="visible"-->
+            <!--fab:fab_title="MY LOCATION" />-->
+
+        <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
+            <!--android:id="@+id/action_download_region"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--fab:fab_addButtonSize="mini"-->
+            <!--fab:fab_colorNormal="@color/qnopy_teal"-->
+            <!--fab:fab_colorPressed="@color/white_pressed"-->
+            <!--fab:fab_icon="@mipmap/ic_arrow_down_bold_circle"-->
+            <!--fab:fab_title="DOWNLOAD REGION" />-->
+
+        <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
+            <!--android:id="@+id/action_saved_region"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--fab:fab_addButtonSize="mini"-->
+            <!--fab:fab_colorNormal="@color/qnopy_teal"-->
+            <!--fab:fab_colorPressed="@color/white_pressed"-->
+            <!--fab:fab_icon="@mipmap/ic_view_list"-->
+            <!--fab:fab_title="SAVED REGIONS" />-->
+
+        <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
+            <!--android:id="@+id/action_map_type"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--fab:fab_addButtonSize="mini"-->
+            <!--fab:fab_colorNormal="@color/qnopy_teal"-->
+            <!--fab:fab_colorPressed="@color/white_pressed"-->
+            <!--fab:fab_icon="@mipmap/ic_map_marker_circle"-->
+            <!--fab:fab_title="MAP TYPE" />-->
+
+
+    <!--</com.getbase.floatingactionbutton.FloatingActionsMenu>-->
+
+    <!--<ProgressBar-->
+        <!--android:id="@+id/progress_bar"-->
+        <!--style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
+
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingLeft="25dp"-->
+        <!--android:paddingRight="40dp"-->
+        <!--android:visibility="gone"-->
+        <!--android:indeterminate="false"-->
+        <!--android:indeterminateOnly="false"-->
+        <!--android:layout_centerInParent="true" />-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/switchContainer"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center_vertical|right"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true">-->
+
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/imageButton"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="@mipmap/map_view_grey" />-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/tolist"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:background="@mipmap/list_view_blue"-->
+            <!--android:visibility="visible" />-->
+    <!--</LinearLayout>-->
+
+
+</RelativeLayout>

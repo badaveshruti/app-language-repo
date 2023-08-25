@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_my_projects"
+        android:icon="@drawable/ic_event"
+        android:title="@string/my_projects" />
+    <item
+        android:id="@+id/navigation_task"
+        android:icon="@drawable/ic_task"
+        android:title="@string/" />
+
+</menu>

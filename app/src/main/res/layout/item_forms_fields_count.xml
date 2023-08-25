@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    app:cardCornerRadius="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <qnopy.com.qnopyandroid.customView.CustomTextView
+            android:id="@+id/tvLocationName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/location_name"
+            android:textSize="@dimen/list_item_size" />
+
+        <qnopy.com.qnopyandroid.customView.CustomTextView
+            android:id="@+id/tvRemainingFieldsCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mandatory field count"
+            android:textColor="@color/red"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_4sdp">
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvNumericLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="@dimen/_6sdp"
+        android:text="Label"
+        app:layout_constraintEnd_toStartOf="@+id/layoutFieldControls"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutFieldControls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNumericLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvNumericLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvNumericLabel" />
+
+    <qnopy.com.qnopyandroid.customView.CustomEditText
+        android:id="@+id/edtNumeric"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:gravity="center"
+        android:hint="Numeric"
+        android:imeOptions="actionDone"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:padding="@dimen/_8sdp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvLast2Readings"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumericLabel" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvLast2Readings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:padding="@dimen/_1sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/edtNumeric"
+        app:layout_constraintEnd_toStartOf="@+id/tvPrevPercent1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edtNumeric"
+        app:layout_constraintTop_toTopOf="@+id/edtNumeric" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvPrevPercent1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:padding="@dimen/_2sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/edtNumeric"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvLast2Readings"
+        app:layout_constraintTop_toTopOf="@+id/edtNumeric" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/usertitle_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:hint="@string/title"
+        android:paddingLeft="16dp"
+        android:paddingRight="2dp"
+        android:textColor="@color/color_chooser_black"
+        android:textSize="18sp" />
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginTop="15sp"-->
+    <!--android:layout_gravity="center"-->
+    <!--&gt;-->
+
+    <!--<Spinner-->
+    <!--android:id="@+id/spn_site"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="0.5"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_marginRight="5dp"-->
+    <!--android:background="@drawable/gradient_spinner"-->
+    <!--/>-->
+    <Spinner
+        android:id="@+id/spn_role"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:background="@drawable/gradient_spinner"
+        android:gravity="center" />
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".flowWithAdmin.ui.adminModule.searchProject.SearchProjectFragment">
+
+    <qnopy.com.qnopyandroid.customView.CustomEditText
+        android:id="@+id/edtSearchProject"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/edittext_rounded_corner"
+        android:drawableStart="@mipmap/search_icon"
+        android:drawablePadding="4dp"
+        android:hint="Search"
+        android:imeOptions="actionSearch"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProjects"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/gray_damn_light"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSearchProject" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvNoProjects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/enter_keyword_to_search_project_from_web"
+        app:layout_constraintBottom_toBottomOf="@+id/rvProjects"
+        app:layout_constraintEnd_toEndOf="@+id/rvProjects"
+        app:layout_constraintStart_toStartOf="@+id/rvProjects"
+        app:layout_constraintTop_toTopOf="@+id/rvProjects" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/rvProjects"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rvProjects" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_action_action_search"
+        android:orderInCategory="100"
+        android:title="@string/abc_search_hint"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/filefolder"
+        android:icon="@drawable/ic_folder_white"
+        android:orderInCategory="101"
+        android:title="@string/FileFolder"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nearby"
+        android:icon="@drawable/ic_hospital_rounded"
+        android:orderInCategory="103"
+        android:title="@string/NearBy"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/download_forms"
+        android:icon="@drawable/ic_sync_badge"
+        android:orderInCategory="104"
+        android:title="@string/action_sync"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_delete"
+        android:title="@string/deleteall_data"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/update_apk"
+        android:title="@string/update"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/workorder_mytask"
+        android:title="@string/workordertask"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/overflowMenu"
+        android:icon="@drawable/icon_option_menu"
+        android:orderInCategory="105"
+        android:title=""
+        android:visible="false"
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/send_db"
+                android:icon="@drawable/send_db"
+                android:title="@string/senddb" />
+
+            <item
+                android:id="@+id/download_your_owndata"
+                android:icon="@drawable/ic_download_data"
+                android:title="@string/downloadYourData"
+                android:visible="false" />
+
+            <!--            <item
+                            android:id="@+id/filefolder"
+                            android:icon="@drawable/ic_folder"
+                            android:title="@string/FileFolder"
+                            android:visible="true" />-->
+
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/signout_icon"
+                android:title="@string/Logout"
+                android:visible="false" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/app_preferences"
+        android:title="@string/app_pref"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/about"
+        android:title="@string/about_text"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/user"
+        android:orderInCategory="102"
+        android:title="@string/Salutation"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <!--<item-->
+    <!--android:id="@+id/locPer"-->
+    <!--android:title="@string/LocationPercent"-->
+    <!--android:visible="true"-->
+    <!--android:icon="@mipmap/downloaddata"-->
+    <!--app:showAsAction="always" />-->
+
+</menu>

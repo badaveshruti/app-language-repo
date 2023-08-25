@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_bg">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login_container_ll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="45dp"
+        android:background="@mipmap/login_qnopy_logo"
+        android:contentDescription="Logo"
+        android:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_container_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/login_container">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etUserLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/login_label_grey"
+            android:theme="@style/TextLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <qnopy.com.qnopyandroid.customView.CustomEditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="112dp"
+                android:hint="@string/user_name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/login_text_grey" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etPasswordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/login_label_grey"
+            android:theme="@style/TextLabel"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etUserLayout"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/login_text_grey">
+
+            <qnopy.com.qnopyandroid.customView.CustomEditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColor="@color/login_text_grey" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <qnopy.com.qnopyandroid.customView.CustomItalicTextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:padding="8dp"
+            android:text="@string/forgot_password"
+            android:textColor="@color/login_text_grey"
+            android:textStyle="italic"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/etPasswordLayout"
+            app:layout_constraintTop_toBottomOf="@+id/etPasswordLayout" />
+
+        <RelativeLayout
+            android:id="@+id/loginBtnView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword">
+
+            <qnopy.com.qnopyandroid.customView.CustomButton
+                android:id="@+id/btnLogin"
+                android:layout_width="@dimen/sign_in_button_width"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_btn_bg"
+                android:text="@string/sign_in"
+                android:textColor="@color/login_text_grey"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <qnopy.com.qnopyandroid.customView.CustomButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="@dimen/sign_in_button_width"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_btn_bg"
+                android:text="@string/submit_caps"
+                android:textColor="@color/login_text_grey"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <qnopy.com.qnopyandroid.customView.CustomTextView
+            android:id="@+id/tvTermsNConditions"
+            style="@style/WhiteCheckboxStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/terms_and_conditions"
+            android:textColor="@color/login_text_grey"
+            app:layout_constraintEnd_toEndOf="@+id/loginBtnView"
+            app:layout_constraintStart_toStartOf="@+id/loginBtnView"
+            app:layout_constraintTop_toBottomOf="@+id/loginBtnView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_container_ll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account yet?"
+            android:textColor="@color/login_label_grey"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/signup_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Sign Up"
+            android:textColor="@color/login_text_grey"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:padding="6dp"
+        android:text="@string/sign_up_for_an_account"
+        android:textColor="@color/login_text_grey"
+        android:textSize="15sp" />
+</RelativeLayout>

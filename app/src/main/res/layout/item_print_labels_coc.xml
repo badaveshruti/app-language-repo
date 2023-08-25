@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<qnopy.com.qnopyandroid.customView.CustomTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvCOCDisplayName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:maxLines="2"
+    android:padding="10dp"
+    android:text="NA"
+    android:textColor="@color/black"
+    android:textSize="18dp" />

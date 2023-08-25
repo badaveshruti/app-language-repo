@@ -1,0 +1,29 @@
+<resources>
+
+    <!--
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+    </style>
+
+    <style name="TextLabel" >
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/login_label_grey</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/login_text_grey</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/login_text_grey</item>
+        <item name="colorControlNormal">@color/login_text_grey</item>
+        <item name="colorControlActivated">@color/login_text_grey</item>
+    </style>
+    <!--<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
+
+    <!--<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+
+
+</resources>

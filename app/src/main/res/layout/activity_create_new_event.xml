@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_new_event"
+    tools:context="qnopy.com.qnopyandroid.ui.activity.CreateNewEventActivity">
+
+    <qnopy.com.qnopyandroid.customView.CustomTextViewSemiBold
+        android:id="@+id/tvSiteName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:text="@string/site"
+        android:textColor="@color/black_faint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextViewSemiBold
+        android:id="@+id/tvFormName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:text="@string/form"
+        android:textColor="@color/black_faint"
+        app:layout_constraintTop_toBottomOf="@+id/tvSiteName"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextViewSemiBold
+        android:id="@+id/tvRequired"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/required_upper_case"
+        android:textAllCaps="true"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFormName" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextViewSemiBold
+        android:id="@+id/tvLabelStartDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:text="@string/event_start_date"
+        android:textColor="@color/black_faint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRequired" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvStartDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="end"
+        android:hint="@string/select_date"
+        android:padding="10dp"
+        android:textColor="@color/color_chooser_gray"
+        android:textColorHint="@color/alert_red"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLabelStartDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvLabelStartDate"
+        app:layout_constraintTop_toTopOf="@+id/tvLabelStartDate" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextViewSemiBold
+        android:id="@+id/tvOptional"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/optional"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelStartDate" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextViewSemiBold
+        android:id="@+id/tvLabelEventName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:text="@string/event_name"
+        android:textColor="@color/black_faint"
+        app:layout_constraintEnd_toEndOf="@+id/tvlabelEndDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOptional" />
+
+    <qnopy.com.qnopyandroid.customView.CustomEditText
+        android:id="@+id/edtEventName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:gravity="end"
+        android:hint="@string/enter_name"
+        android:imeOptions="actionDone"
+        android:inputType="textCapSentences"
+        android:padding="8dp"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLabelEventName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvLabelEventName"
+        app:layout_constraintTop_toTopOf="@+id/tvLabelEventName" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextViewSemiBold
+        android:id="@+id/tvlabelEndDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:text="@string/event_end_date"
+        android:textColor="@color/black_faint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelEventName" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvSelectEndDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="end"
+        android:hint="@string/select_date"
+        android:padding="10dp"
+        android:textColorHint="@color/dark_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/tvlabelEndDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvlabelEndDate"
+        app:layout_constraintTop_toTopOf="@+id/tvlabelEndDate" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextViewSemiBold
+        android:id="@+id/tvCreateEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/event_start_blue"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/start_data_entry"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvlabelEndDate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

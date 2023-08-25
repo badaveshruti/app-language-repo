@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/eventsFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="qnopy.com.qnopyandroid.flowWithAdmin.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_projectFragment"
+            app:destination="@id/projectFragment"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchProjectFragment"
+            app:destination="@id/searchProjectFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="qnopy.com.qnopyandroid.flowWithAdmin.ui.events.EventsFragment"
+        android:label="fragment_events"
+        tools:layout="@layout/fragment_events">
+
+        <argument
+            android:name="siteId"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="qnopy.com.qnopyandroid.flowWithAdmin.ui.settings.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="qnopy.com.qnopyandroid.ui.task.TasksTabFragment"
+        android:label="fragment_tasks"
+        tools:layout="@layout/fragment_tasks_tab">
+
+        <action
+            android:id="@+id/action_taskFragment_to_taskMapFragment"
+            app:destination="@id/taskMapFragment"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <!--    <fragment
+            android:id="@+id/tasksMapFragment"
+            android:name="qnopy.com.qnopyandroid.ui.task.TaskMapFragment"
+            android:label="fragment_tasks_maps"
+            tools:layout="@layout/fragment_task_map" />-->
+
+    <fragment
+        android:id="@+id/projectFragment"
+        android:name="qnopy.com.qnopyandroid.flowWithAdmin.ui.project.ProjectFragment"
+        android:label="fragment_project"
+        tools:layout="@layout/fragment_project">
+
+        <argument
+            android:name="getNewForm"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+        <argument
+            android:name="site"
+            app:argType="qnopy.com.qnopyandroid.clientmodel.Site" />
+
+        <action
+            android:id="@+id/action_projectFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/bottom_navigation"
+            app:popUpToInclusive="false" />
+
+        <action
+            android:id="@+id/action_projectFragment_to_eventsFragment"
+            app:destination="@id/eventsFragment"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
+
+        <action
+            android:id="@+id/action_projectFragment_to_getNewFormsFragment"
+            app:destination="@id/getNewFormsFragment" />
+
+        <action
+            android:id="@+id/action_projectFragment_to_searchProjectFragment"
+            app:destination="@id/searchProjectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/getNewFormsFragment"
+        android:name="qnopy.com.qnopyandroid.flowWithAdmin.ui.adminModule.getForms.GetNewFormsFragment"
+        android:label="fragment_get_new_forms"
+        tools:layout="@layout/fragment_get_new_forms">
+
+        <argument
+            android:name="site"
+            app:argType="qnopy.com.qnopyandroid.clientmodel.Site" />
+
+        <argument
+            android:name="getNewForm"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchProjectFragment"
+        android:name="qnopy.com.qnopyandroid.flowWithAdmin.ui.adminModule.searchProject.SearchProjectFragment"
+        android:label="fragment_search_project"
+        tools:layout="@layout/fragment_search_project" />
+
+    <fragment
+        android:id="@+id/taskMapFragment"
+        android:name="qnopy.com.qnopyandroid.ui.task.TaskMapFragment"
+        android:label="fragment_tasks_map"
+        tools:layout="@layout/fragment_task_map">
+
+        <action
+            android:id="@+id/action_taskMapFragment_to_taskFragment"
+            app:destination="@id/tasksFragment"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
+    </fragment>
+</navigation>

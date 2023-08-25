@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/ivQnopyLogo"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/qnopy_logo_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvSupportContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="+1-866-766-7924"
+        android:textColor="@color/color_Gray"
+        app:layout_constraintBottom_toBottomOf="@+id/ivQnopyLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/ivQnopyLogo"
+        app:layout_constraintTop_toTopOf="@+id/ivQnopyLogo" />
+
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/labelClient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/client"
+        android:textColor="@color/color_chooser_gray"
+        app:layout_constraintEnd_toEndOf="@+id/labelProject"
+        app:layout_constraintStart_toStartOf="@+id/labelProject"
+        app:layout_constraintTop_toBottomOf="@+id/ivQnopyLogo" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvClient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Haley"
+        android:textColor="@color/black_semi_transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/labelClient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/labelClient"
+        app:layout_constraintTop_toTopOf="@+id/labelClient" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/labelProject"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/project_with_colon"
+        android:textColor="@color/color_chooser_gray"
+        app:layout_constraintEnd_toEndOf="@+id/labelSampleId"
+        app:layout_constraintStart_toStartOf="@+id/labelSampleId"
+        app:layout_constraintTop_toBottomOf="@+id/labelClient" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvProjectName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="QA Fremont"
+        android:textColor="@color/black_semi_transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/labelProject"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/labelProject"
+        app:layout_constraintTop_toTopOf="@+id/labelProject" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/labelSampleId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/sample_id"
+        android:textColor="@color/color_chooser_gray"
+        app:layout_constraintEnd_toEndOf="@+id/labelDateTime"
+        app:layout_constraintStart_toStartOf="@+id/labelDateTime"
+        app:layout_constraintTop_toBottomOf="@+id/labelProject" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvSampleId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="09 Sep"
+        android:textColor="@color/black_semi_transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/labelSampleId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/labelSampleId"
+        app:layout_constraintTop_toTopOf="@+id/labelSampleId" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/labelDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/date_time"
+        android:textColor="@color/color_chooser_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelSampleId" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvDateTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="09/24/1970 12:00"
+        android:textColor="@color/black_semi_transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/labelDateTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/labelDateTime"
+        app:layout_constraintTop_toTopOf="@+id/labelDateTime" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/labelPres"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pres"
+        android:textColor="@color/color_chooser_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPres"
+        app:layout_constraintEnd_toEndOf="@+id/labelDateTime"
+        app:layout_constraintStart_toStartOf="@+id/labelDateTime"
+        app:layout_constraintTop_toTopOf="@+id/tvPres" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvPres"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="H2SO4"
+        android:textColor="@color/black_semi_transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/labelPres"
+        app:layout_constraintTop_toBottomOf="@+id/tvDateTime"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <qnopy.com.qnopyandroid.customView.CustomButton
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_dark_blue_bg"
+        android:padding="10dp"
+        android:text="@string/close"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnPrint"
+        app:layout_constraintTop_toBottomOf="@+id/tvPres" />
+
+    <qnopy.com.qnopyandroid.customView.CustomButton
+        android:id="@+id/btnPrint"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/rounded_gray_bg"
+        android:padding="10dp"
+        android:text="@string/print"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btnClose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnClose"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:backgroundTint="@android:color/transparent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:id="@+id/relativeLayoutBottomSheet"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="56dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:elevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:layout_marginBottom="20dp">
+        <ImageView
+            android:id="@+id/image_view_comment_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/task_cancle"
+            android:layout_gravity="right"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/textViewTaskTitleForComments"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/edittext_rounded_corner"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:text="task"
+            android:gravity="center_vertical"
+            android:textColor="@color/black_faint"
+            android:layout_marginBottom="4dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            android:background="@drawable/edittext_rounded_corner"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/textViewCommentLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Comments"
+                android:paddingLeft="20dp"
+                android:textSize="16sp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/textView_Add_Comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add note"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textSize="16sp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:textColor="@color/qnopy_teal"
+                android:textAlignment="textEnd"
+                android:gravity="end"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutAddComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@color/white"
+            android:weightSum="10"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/editText_Add_Comment"
+                android:paddingLeft="20dp"
+                android:hint="Enter comment"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_rounded_corner"
+                android:layout_weight="2"
+                android:singleLine="true"
+                android:textSize="16sp"
+                android:layout_margin="2dp"/>
+
+            <Button
+                android:id="@+id/button_post_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="post"
+                android:textColor="@color/qnopy_teal"
+                android:layout_weight="8"
+                android:background="@drawable/button_drawable_qnopy_teal"
+                android:layout_margin="2dp"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="30dp"
+            android:fadeScrollbars="false">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTaskComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/task_layout_rounded_corner"
+                android:paddingLeft="20dp"
+                android:paddingBottom="50dp"
+                android:layout_marginTop="10dp">
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

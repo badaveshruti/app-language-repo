@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:context=".ui.printCOC.PrintCOCActivity">
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Select dates to generate/download and print COC"
+        android:textColor="@color/colorPrimary" />
+
+    <com.applandeo.materialcalendarview.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:eventsEnabled="false"
+        app:headerColor="@color/white"
+        app:headerLabelColor="@color/black_faint"
+        app:selectionColor="@color/red"
+        app:selectionLabelColor="@color/white"
+        app:todayLabelColor="@color/colorPrimary"
+        app:type="many_days_picker" />
+
+    <qnopy.com.qnopyandroid.customView.CustomButton
+        android:id="@+id/btnPrintCOC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/round_corner_color_primary"
+        android:text="Print"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</LinearLayout>

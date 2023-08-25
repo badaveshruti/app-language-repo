@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.LocationDetailActivity"
+    tools:showIn="@layout/location_detail_ux">
+
+    <LinearLayout
+        android:id="@+id/appName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/form_nav_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrow_prev_form"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/locName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/location_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/form_nav_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrow_next_form"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChildApps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:clipToPadding="false"
+        android:paddingLeft="@dimen/padding_rv_child_apps"
+        android:paddingRight="@dimen/padding_rv_child_apps"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/alert_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_chooser_red1"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="@string/there_are_mandatory_fields_that_need_to_be_filled"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+    <!--</LinearLayout>-->
+
+    <include
+        android:id="@+id/activity_split_pane"
+        layout="@layout/layout_split_frames"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/ll_form_details"
+        layout="@layout/fragment_form_details"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/data_entry_bottombar_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/data_entry_control_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="3dp"
+        android:paddingEnd="3dp"
+        android:paddingRight="3dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/draw_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="3dp">
+
+            <ImageView
+                android:id="@+id/drawing_ib"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/data_entry_drawing_icon"
+                tools:ignore="VectorDrawableCompat" />
+
+            <qnopy.com.qnopyandroid.customView.CustomTextView
+                android:id="@+id/draw_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/draw" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gallery_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="3dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/gallery_ib"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/data_entry_gallery_icon"
+                tools:ignore="VectorDrawableCompat" />
+
+            <qnopy.com.qnopyandroid.customView.CustomTextView
+                android:id="@+id/gallery_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/menu_gallery" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/camera_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="3dp">
+
+            <ImageView
+                android:id="@+id/camera_ib"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/data_entry_camera_icon"
+                tools:ignore="VectorDrawableCompat" />
+
+            <qnopy.com.qnopyandroid.customView.CustomTextView
+                android:id="@+id/camera_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/camera" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:id="@+id/saved_photos_ll"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="5dp"
+                android:background="@mipmap/data_entry_attached_button_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/data_entry_attached_icon"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <qnopy.com.qnopyandroid.customView.CustomTextView
+                    android:id="@+id/saved_photos_count_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#DD2C00" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/syncdata_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+                <ImageView
+                    android:id="@+id/syncdata_ib"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/data_entry_send_icon"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <qnopy.com.qnopyandroid.customView.CustomTextView
+                    android:id="@+id/syncdata_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/upload" />
+            </LinearLayout>
+
+            <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+                android:id="@+id/tvNotifyUploadStatus"
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/red_circle_no_padding"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

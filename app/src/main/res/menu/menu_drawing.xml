@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/save_drawing"
+        android:icon="@mipmap/ic_action_save"
+        android:title="@string/save"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/filefolder"
+        android:icon="@drawable/filefolder"
+        android:title="@string/FileFolder"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/user"
+        android:title="@string/Salutation"
+        android:visible="false"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/logout"
+        android:title="@string/Logout"
+        android:visible="false"
+        app:showAsAction="never" />
+</menu>

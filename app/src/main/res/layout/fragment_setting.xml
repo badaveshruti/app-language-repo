@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".flowWithAdmin.ui.settings.SettingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutVersion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/tvFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="2dp"
+            android:text="@string/NA"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvUserName"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="@id/layoutVersion"
+            app:layout_constraintRight_toRightOf="@id/layoutVersion"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <qnopy.com.qnopyandroid.customView.CustomTextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:text="@string/NA"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/versionTitle"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="@id/tvFirstName"
+            app:layout_constraintRight_toRightOf="@id/tvFirstName"
+            app:layout_constraintTop_toBottomOf="@+id/tvFirstName" />
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/versionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:text="Version: NA"
+            android:textColor="@color/qnopy_teal"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="@id/tvUserName"
+            app:layout_constraintRight_toRightOf="@id/tvUserName"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:itemBackground="@drawable/drawer_item_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutVersion"
+        app:menu="@menu/nav_menu_home_screen" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

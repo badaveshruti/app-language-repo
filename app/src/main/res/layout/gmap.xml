@@ -1,0 +1,78 @@
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmcontent_map_ux:map="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/gmap"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:name="com.google.android.gms.maps.SupportMapFragment"/>
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapfragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="qnopy.com.qnopyandroid.map.MapActivity">
+
+    <fragment
+        android:id="@+id/gmap"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/switchContainer" />
+
+    <RadioGroup
+        android:id="@+id/radiobtnview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/white_bg_corn"
+        android:orientation="horizontal"
+        android:paddingRight="8dp">
+
+        <RadioButton
+            android:id="@+id/gmapview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/str_rb_normal" />
+
+        <RadioButton
+            android:id="@+id/gsatelliteview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_rb_satellite" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/switchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/list_bottom_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/map_list_icon" />
+
+        <TextView
+            android:id="@+id/tolist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:text="@string/tap_here_to_see_list_view"
+            android:textSize="@dimen/bottom_item_size" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@mipmap/headerbg"
+        android:orientation="horizontal" >
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentTop="false"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:gravity="center_vertical|end">
+
+        <ImageButton
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_action_camera"
+            android:contentDescription="@string/desc" 
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp" />
+
+        <ImageButton
+            android:id="@+id/object"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/object"
+            android:contentDescription="@string/desc"
+            android:visibility="gone"
+            android:layout_gravity="center" />
+
+        <!--<com.qnopy.qnopy.fetchdraw.SpinnerReselect-->
+            <!--android:id="@+id/newNgps"-->
+            <!--style="@style/SpinnerAsEditText"-->
+            <!--android:layout_width="45dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:contentDescription="@string/desc"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_marginLeft="5dp" />-->
+
+        <ImageButton
+            android:id="@+id/newNgps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_action_map"
+            android:contentDescription="@string/desc"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp" />
+
+        <ImageButton
+            android:id="@+id/actions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_action_redo"
+            android:contentDescription="@string/desc"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp" />
+
+   <ImageButton
+            android:id="@+id/action_zoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_action_zoom_in"
+            android:contentDescription="@string/desc"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp" />
+
+        <!--<com.qnopy.qnopy.fetchdraw.SpinnerReselect-->
+            <!--android:id="@+id/actions"-->
+            <!--style="@style/SpinnerAsEditText"-->
+            <!--android:layout_width="45dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:contentDescription="@string/desc"-->
+            <!--android:layout_marginLeft="5dp" />-->
+
+        <ImageButton
+            android:id="@+id/undo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_action_undo"
+            android:contentDescription="@string/desc" 
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp" />
+
+        <ImageButton
+            android:id="@+id/open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_action_gallery"
+            android:contentDescription="@string/desc" 
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp" />
+
+        <ImageButton
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_action_save"
+            android:contentDescription="@string/desc"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:layout_marginLeft="12dp" />
+    </LinearLayout>
+
+</RelativeLayout>

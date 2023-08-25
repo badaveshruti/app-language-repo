@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_user_save"
+        android:icon="@drawable/data_entry_tick_icon"
+        android:title="@string/save_uppercase"
+        app:showAsAction="always" />
+
+</menu>

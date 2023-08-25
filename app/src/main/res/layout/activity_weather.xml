@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mat_gray_200"
+    tools:context="qnopy.com.qnopyandroid.ui.weather.WeatherActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/rounded_white_corner_oval"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <qnopy.com.qnopyandroid.customView.CustomEditText
+            android:id="@+id/edtSearchLoc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/rounded_white_corner_oval"
+            android:drawableStart="@drawable/ic_location_arrow"
+            android:drawableLeft="@drawable/ic_location_arrow"
+            android:drawablePadding="10dp"
+            android:hint="@string/enter_city_name_or_zip_code"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:singleLine="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnGo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <qnopy.com.qnopyandroid.customView.CustomTextViewSemiBold
+            android:id="@+id/btnGo"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/white_circle_bg"
+            android:gravity="center"
+            android:minWidth="50dp"
+            android:padding="10dp"
+            android:text="@string/go"
+            android:textColor="@color/event_start_blue"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/edtSearchLoc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edtSearchLoc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutWeather"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutSearch">
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/tvLocationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:text="NA"
+            android:textColor="@color/black_faint"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/tvToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Today"
+            android:textColor="@color/black_faint"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLocationName" />
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NA"
+            android:textColor="@color/black_faint"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvToday" />
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/tvDailySummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Daily Summary"
+            android:textColor="@color/black_faint"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/tvCurrentCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:text="NA"
+            android:textColor="@color/black_faint"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDailySummary" />
+
+        <ImageView
+            android:id="@+id/ivSunrise"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_sunrise"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCurrentCondition" />
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/tvTimeSunrise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="NA"
+            android:textColor="@color/black_faint"
+            app:layout_constraintBottom_toBottomOf="@+id/ivSunrise"
+            app:layout_constraintStart_toEndOf="@+id/ivSunrise"
+            app:layout_constraintTop_toTopOf="@+id/ivSunrise" />
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/tvTempHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="High NA°"
+            android:textColor="@color/black_faint"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTimeSunrise"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvTimeSunrise" />
+
+        <ImageView
+            android:id="@+id/ivSunset"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_sunset"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivSunrise" />
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/tvTimeSunset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="NA"
+            android:textColor="@color/black_faint"
+            app:layout_constraintBottom_toBottomOf="@+id/ivSunset"
+            app:layout_constraintStart_toEndOf="@+id/ivSunset"
+            app:layout_constraintTop_toTopOf="@+id/ivSunset" />
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/tvTempLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Low NA°"
+            android:textColor="@color/black_faint"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTimeSunset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvTimeSunset" />
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/tvDirection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Dir"
+            android:textColor="@color/black_faint"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvWind"
+            app:layout_constraintTop_toTopOf="@+id/tvTime" />
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Time"
+            android:textColor="@color/black_faint"
+            app:layout_constraintEnd_toStartOf="@+id/tvCondition"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivSunset" />
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/tvCondition"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Cond"
+            android:textColor="@color/black_faint"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTime"
+            app:layout_constraintEnd_toStartOf="@+id/tvTemp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvTime"
+            app:layout_constraintTop_toTopOf="@+id/tvTime" />
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/tvTemp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Temp"
+            android:textColor="@color/black_faint"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTime"
+            app:layout_constraintEnd_toStartOf="@+id/tvWind"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvCondition"
+            app:layout_constraintTop_toTopOf="@+id/tvTime" />
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/tvWind"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Wind"
+            android:textColor="@color/black_faint"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTime"
+            app:layout_constraintEnd_toStartOf="@+id/tvDirection"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvTemp"
+            app:layout_constraintTop_toTopOf="@+id/tvTime" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvForecastHourly"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

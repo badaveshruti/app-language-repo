@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+
+    <Button
+        android:id="@+id/takepic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   Take a picture   "
+        android:textColor="#ffffffff"
+        android:padding="20dp"
+        android:background="@xml/button_style" />
+
+    <Button
+        android:id="@+id/library"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Load from library "
+        android:layout_toRightOf="@+id/takepic"
+        android:textColor="#ffffffff"
+        android:padding="20dp"
+        android:background="@xml/button_style" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Go back to form "
+        android:layout_below="@+id/takepic"
+        android:textColor="#ffffffff"
+        android:padding="20dp"
+        android:background="@xml/button_style" />
+
+    <Button
+        android:id="@+id/stay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="        Stay        "
+        android:layout_toRightOf="@+id/back"
+        android:layout_below="@+id/library"
+        android:textColor="#ffffffff"
+        android:padding="20dp"
+        android:background="@xml/button_style" />
+</RelativeLayout> 

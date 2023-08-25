@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_server_connect"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="qnopy.com.qnopyandroid.ui.activity.ServerConnectActivity">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="25dp"
+        android:id="@+id/app_version_ev"
+        android:hint="api_version (eg.v5)"
+        android:layout_below="@+id/port_ev"
+        android:layout_alignLeft="@+id/port_ev"
+        android:layout_alignStart="@+id/port_ev" />
+
+    <TextView
+        android:text="Default Server :"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:id="@+id/default_server"
+        android:textStyle="normal|bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="25dp"
+        android:id="@+id/port_ev"
+        android:hint="PORT (eg.8080)"
+        android:layout_below="@+id/ip_ev"
+        android:layout_alignLeft="@+id/ip_ev"
+        android:layout_alignStart="@+id/ip_ev" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="34dp"
+        android:id="@+id/ip_ev"
+        android:hint="IP(eg.192.168.0.2)"
+        android:layout_below="@+id/default_server"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Connect to Default Server"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/default_server_btn"
+        android:layout_below="@+id/connect_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/connect_btn"
+        android:layout_marginTop="25dp"
+
+        android:layout_below="@+id/app_version_ev"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

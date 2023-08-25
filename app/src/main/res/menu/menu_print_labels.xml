@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_select_all"
+        android:icon="@drawable/ic_select_all"
+        android:title="Select All"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/item_print"
+        android:icon="@drawable/ic_print_white"
+        android:title="@string/print"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/item_folder"
+        android:icon="@drawable/ic_folder_white"
+        android:orderInCategory="101"
+        android:title="@string/FileFolder"
+        android:visible="true"
+        app:showAsAction="always" />
+</menu>

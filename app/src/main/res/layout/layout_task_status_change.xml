@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:backgroundTint="@android:color/transparent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:id="@+id/relativeLayoutBottomSheet"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="56dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:elevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="30dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/textViewTaskStatusDialogTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/task_status"
+                android:textColor="@color/black_faint"
+                android:gravity="center_horizontal"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textViewTaskStatusDialog"
+                android:layout_below="@id/textViewTaskStatusDialogTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Do you want to change task status?"
+                android:gravity="center_horizontal"
+                android:textSize="16sp"/>
+
+            <View
+                android:id="@+id/belowTaskStatus"
+                android:layout_below="@+id/textViewTaskStatusDialog"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/simple_grey"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/textViewOpen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/belowTaskStatus"
+                android:layout_marginTop="19dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:text="Open"
+                android:textColor="@color/qnopy_teal"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/belowOpen"
+                android:layout_below="@+id/textViewOpen"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/simple_grey"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/textViewOngoing"
+                android:layout_below="@+id/belowOpen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Ongoing"
+                android:textSize="16sp"
+                android:textColor="@color/qnopy_teal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <View
+                android:id="@+id/belowOngoing"
+                android:layout_below="@+id/textViewOngoing"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/simple_grey"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/textViewAssign"
+                android:layout_below="@+id/belowOngoing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Assigned"
+                android:textSize="16sp"
+                android:textColor="@color/qnopy_teal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <View
+                android:id="@+id/belowAssign"
+                android:layout_below="@+id/textViewAssign"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/simple_grey"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/textViewComplete"
+                android:layout_below="@+id/belowAssign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Completed"
+                android:textSize="16sp"
+                android:textColor="@color/qnopy_teal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <View
+                android:id="@+id/belowComplete"
+                android:layout_below="@+id/textViewComplete"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/simple_grey"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

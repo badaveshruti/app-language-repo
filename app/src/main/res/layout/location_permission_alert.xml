@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivLoc"
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_loc_marker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/labelUseLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Use your Location"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLoc" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/labelLocUseDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:text="Allow Qnopy to use your location to see New Location that may be added through maps. \n\nQnopy will use location to add co-ordinates to the attachments, Tasks and Forms \n\nQnopy will use location to search nearby hospitals in case of emergency and while creating events."
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelUseLoc" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/btnTurnOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="8dp"
+        android:text="Turn on"
+        android:textColor="@color/event_start_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/btnNoThanks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelLocUseDetails" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/btnNoThanks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="8dp"
+        android:text="Not now"
+        android:textColor="@color/event_start_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelLocUseDetails" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

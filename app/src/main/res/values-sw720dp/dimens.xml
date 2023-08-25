@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="site_title_size">20sp</dimen>
+    <dimen name="req_title_size">16sp</dimen>
+    <dimen name="list_item_size">22sp</dimen>
+    <dimen name="activity_mobilecard_text_size">15sp</dimen>
+    <dimen name="intro_textsize">30dp</dimen>
+    <dimen name="intro_textdetail">20dp</dimen>
+    <dimen name="padding_rv_child_apps">270dp</dimen>
+
+</resources>

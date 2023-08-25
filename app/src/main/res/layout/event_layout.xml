@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:padding="5dp">
+
+    <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+        android:id="@+id/tvEventDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/light_blue_800"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text=" 01 \nJan"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tvProjectName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvEventName"
+        app:layout_constraintWidth_percent=".15" />
+
+    <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+        android:id="@+id/tvEventName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="2dp"
+        android:text="@string/NA"
+        app:layout_constraintEnd_toStartOf="@+id/layoutCloseEvent"
+        app:layout_constraintStart_toEndOf="@+id/tvEventDate"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvFormName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="2dp"
+        android:text="@string/NA"
+        app:layout_constraintEnd_toStartOf="@+id/layoutCloseEvent"
+        app:layout_constraintStart_toEndOf="@+id/tvEventDate"
+        app:layout_constraintTop_toBottomOf="@+id/tvEventName" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvProjectName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="2dp"
+        android:text="@string/NA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/layoutCloseEvent"
+        app:layout_constraintStart_toEndOf="@+id/tvEventDate"
+        app:layout_constraintTop_toBottomOf="@+id/tvFormName" />
+
+    <RelativeLayout
+        android:id="@+id/layoutCloseEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivEventOptions"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivCloseEvent"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:srcCompat="@drawable/ic_check_circle" />
+
+        <qnopy.com.qnopyandroid.customView.CustomTextView
+            android:id="@+id/tvFinalize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivCloseEvent"
+            android:gravity="center"
+            android:text="Finalize"
+            android:textColor="@color/green_700"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivEventOptions"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_more_vert_black_24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Copyright (C) 2012 The Android Open Source Project
+ 
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+ 
+       http://www.apache.org/licenses/LICENSE-2.0
+ 
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<resources>
+    <!--NEW UX 14 Nov 2017 START-->
+    <color name="colorPrimary">#196b76</color>
+    <color name="colorPrimaryDark">#155463</color>
+    <color name="colorAccent">#0A657A</color>
+    <color name="hint_text">#c1c2c4</color>
+    <color name="hint_text_new">#3722F4</color>
+
+    <color name="home_text_color">#0055b2</color>
+
+    <!--NEW UX END-->
+    <!--SUBMITTALS CARD-->
+    <color name="color_chooser_green">#63C87C</color>
+    <color name="color_chooser_orange">#F0984E</color>
+    <color name="required_background_red1">#EC7A7A</color>
+
+    <color name="green_btn">#A8B32C</color>
+    <color name="egg_shell">#EFEEED</color>
+    <color name="progress_green">#00ff00</color>
+    <color name="faint_green">#4390EE90</color>
+    <color name="faint_switch_green">#8190EE90</color>
+
+    <color name="black_faint">#0F0F0F</color>
+    <color name="faint_black">#333333</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorLigtGray">#ADADAD</color>
+
+    <!--DATA ENTRY FORM-->
+    <color name="orange">#e46e26</color>
+
+    <!--LIST HEADER SECTION-->
+    <color name="section_background_color">#f8f8f8</color>
+    <color name="section_text_color">#929396</color>
+
+    <!--ACTION BAR SEARCH-->
+    <color name="theme_primary_text_inverted">#ffffff</color>
+    <color name="theme_secondary_text_inverted">#8affffff</color>
+
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="blue_semi_transparent">#805677fc</color>
+    <color name="blue_semi_transparent_pressed">#80738ffe</color>
+    <color name="btn_bg">#FF222222</color>
+    <color name="btn_pressed_bg">#FFFFCC00</color>
+    <color name="btn_pressed_bg1">#FFFFCC00</color>
+    <color name="btn_selected_bg">#FFFFFFFF</color>
+    <color name="btn_fg">#FF555555</color>
+    <color name="btn_pressed_fg">#FF555555</color>
+    <color name="btn_selected_fg">#FF000000</color>
+    <color name="blue">#3722F4</color>
+    <color name="light_blue_semi_transparent">#B225AFE2</color>
+    <color name="light_blue">#25AFE2</color>
+    <color name="event_start_blue">#007AFF</color>
+    <color name="blue_start_new">#55A5FF</color>
+    <color name="blue_event_alert">#2866BF</color>
+    <color name="qnopy_teal">#00999f</color>
+    <color name="qnopy_splash">#0AAF83</color>
+    <color name="snackbar_bg">#FFAE5D</color>
+    <color name="actionbar_teal">#2C88A6</color>
+    <color name="site_name_bg">#064169</color>
+    <color name="tag_location_color">#E53</color>
+    <color name="alert_red">#F44336</color>
+    <color name="finalize_button_red">#E23223</color>
+    <color name="red">#D0312D</color>
+    <color name="tagged_location_color">#00E676</color>
+
+    <color name="action_bar">#0d0d0d</color>
+    <color name="white">#ffffff</color>
+    <color name="white_60">#99FFFFFF</color>
+    <color name="onboard_login_white">#e5e5e5</color>
+    <color name="subtitle_white">#bbccd0</color>
+    <color name="transferent_white">#00ffffff</color>
+    <color name="off_white">#99ffffff</color>
+
+    <drawable name="actionbar_button_bg">#00000000</drawable>
+    <drawable name="actionbar_button_pressed_bg">#60FFFFFF</drawable>
+    <drawable name="TASK_GRAY">#9C9C9C</drawable>
+    <drawable name="actionbar_button_selected_bg">#CCFFCC00</drawable>
+
+    <!-- Color Picker-->
+    <color name="task_faint_blue">#98DAE9</color>
+    <color name="dialog_title_color">#33B5E5</color>
+    <color name="tools_text_color">#efefef</color>
+    <color name="transparent">#00000000</color>
+    <color name="custom_background_color">#002534</color>
+    <color name="text_color">@android:color/white</color>
+    <color name="rectangle_secondary_color">#33B5E5</color>
+    <color name="rectangle_primary_color">#555555</color>
+    <color name="holo_blue_bright">#33B5E5</color>
+    <color name="dialog_edittext_color">#000</color>
+    <color name="dialog_edittext_color_hint">#80000000</color>
+    <color name="cursor_tool_deactive_primary_color">#555555</color>
+    <color name="dialog_subtitle">#CCCCCC</color>
+    <color name="dialog_subtitle_border">#696969</color>
+    <color name="dialog_background_pre_v14_color">#FF1E1E1E</color>
+    <color name="color_chooser_rgb_red">#FFEB4618</color>
+    <color name="color_chooser_rgb_green">#FF078707</color>
+    <color name="color_chooser_rgb_blue">#FF0284e7</color>
+    <color name="color_chooser_rgb_alpha">#FFCCCCCC</color>
+    <color name="grey_color_chooser">#A9A9A9</color>
+    <color name="grey_new_event">#F2F2F7</color>
+    <color name="login_label_grey">#667477</color>
+    <color name="login_text_grey">#c9cccc</color>
+    <color name="simple_grey">#D5D5D5</color>
+    <color name="light_grey">#D3D3D3</color>
+    <color name="text_blue">#304291</color>
+    <color name="task_assign_orange">#FFA500</color>
+    <color name="task_open_grey">#808080</color>
+    <color name="task_ongoing_green">#008000</color>
+    <color name="task_completed_red">#FF0000</color>
+    <color name="silver">#C0C0C0</color>
+
+    <color name="faint_blue">#D8EFFD</color>
+
+    <!-- colors for preselect color chooser -->
+    <color name="color_chooser_blue1">#FF0074CD</color>
+    <color name="color_chooser_blue2">#FF00B4F1</color>
+    <color name="color_chooser_green1">#FF078707</color>
+    <color name="color_chooser_green2">#FF8EC430</color>
+    <color name="color_chooser_brown1">#FF61290E</color>
+    <color name="color_chooser_brown2">#FFA84818</color>
+    <color name="color_chooser_brown3">#FFDEAE66</color>
+    <color name="color_chooser_brown4">#FFF0E4A8</color>
+    <color name="color_chooser_purple1">#FF7D1379</color>
+    <color name="color_chooser_purple2">#FFA743D1</color>
+    <color name="color_chooser_purple3">#FFCA0186</color>
+    <color name="color_chooser_purple4">#FFEB90D3</color>
+    <color name="color_chooser_red1">#FFC5060E</color>
+    <color name="color_chooser_orange1">#FFEB4618</color>
+
+    <color name="required_background_red2">#ff3320</color>
+    <color name="required_background_red">#ff9999</color>
+    <color name="color_chooser_orange2">#FFF9921C</color>
+    <color name="color_chooser_yellow">#FFF3D605</color>
+    <color name="yellow_ongoing">#FFCC00</color>
+    <color name="color_chooser_black">#FF000000</color>
+    <color name="color_card_date">#272935</color>
+    <color name="color_card_date_label">#b9babc</color>
+    <color name="color_chooser_gray">#A3A3A3</color>
+    <color name="search_gray">#E3E3E5</color>
+    <color name="gray_damn_light">#f7f7f7</color>
+    <color name="gray_bottom_nav">#F1F1F1</color>
+    <color name="color_chooser_white">#FFFFFFFF</color>
+    <color name="color_chooser_transparent">#00000000</color>
+
+    <string name="color_rgb" translatable="false">Red Green Blue (RGB)</string>
+    <string name="color_red" translatable="false">Red</string>
+    <string name="color_green" translatable="false">Green</string>
+    <string name="color_blue" translatable="false">Blue</string>
+    <string name="color_alpha" translatable="false">Alpha</string>
+    <string name="color_pre" translatable="false">preselected</string>
+
+    <!-- card colors -->
+    <color name="card_background">#ffffff</color>
+    <color name="card_shadow_1">#d4d4d4</color>
+    <color name="card_shadow_2">#dddddd</color>
+    <color name="card_detailing">#eee</color>
+    <color name="mat_gray_300">#e0e0e0</color>
+    <color name="mat_gray_200">#eeeeee</color>
+    <color name="bg_gray">#EAE9F0</color>
+    <color name="mat_gray_100">#f5f5f5</color>
+    <color name="blue_gray_100">#cfd8dc</color>
+    <color name="dark_gray">#838383</color>
+
+    <!--ON BOARDING SLIDER-->
+
+    <array name="array_dot_active">
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimary</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/white_pressed</item>
+        <item>@color/white_pressed</item>
+        <item>@color/white_pressed</item>
+        <item>@color/white_pressed</item>
+    </array>
+
+    <color name="white_intro">#b9bcbc</color>
+
+    <color name="black">#000000</color>
+    <color name="color_Gray">#393838</color>
+    <color name="color_Gray_mid">#404040</color>
+    <color name="color_icon_gray">#666666</color>
+
+    <color name="example_1_bg">#3A284C</color>
+    <color name="example_1_bg_light">#433254</color>
+    <color name="example_1_white_light">#4DFFFFFF</color>
+    <color name="example_1_white">#D9FFFFFF</color>
+
+    <color name="colorTooLigtGray">#66E3E3E3</color>
+    <color name="silver_tile">#a5a9a9</color>
+    <color name="teal_tile">#007d85</color>
+    <color name="textColor">#6A6A6A</color>
+
+</resources>

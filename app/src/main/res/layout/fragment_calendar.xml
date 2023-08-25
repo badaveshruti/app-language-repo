@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.calendarUser.CalendarFragment">
+
+    <RelativeLayout
+        android:id="@+id/layoutMonthFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/tvMonthYr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="start"
+            android:padding="10dp"
+            android:text="January 1900"
+            android:textColor="@color/black_faint"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/layoutFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="end|center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <qnopy.com.qnopyandroid.customView.CustomItalicTextView
+                android:id="@+id/tvOngoingForms"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="@string/filter_my_forms"
+                android:textColor="@color/black_faint"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchFilterForms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                app:thumbTint="@drawable/switch_thumb_selector"
+                app:trackTint="@drawable/switch_track_selector" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.ycuwq.calendarview.CalendarLayout
+        android:id="@+id/calendarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutMonthFilter"
+        android:orientation="vertical">
+
+        <com.ycuwq.calendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bottomTextSize="5sp" />
+
+        <!-- Note: only single child can make the calendar
+         view smooth scrollable especially only recyclerview works
+         well as tried constraintLayout doesn't scroll smooth, may be linear or relative layout may work -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAllEvents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:background="@color/grey_new_event"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </com.ycuwq.calendarview.CalendarLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutStartEventButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <qnopy.com.qnopyandroid.customView.CustomTextView
+            android:id="@+id/fabStartEvent"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/circle_bg_teal"
+            android:gravity="center|center_vertical"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <qnopy.com.qnopyandroid.customView.CustomTextView
+            android:id="@+id/tvStartNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center|center_vertical"
+            android:text="@string/start_new"
+            android:textColor="@color/qnopy_teal"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

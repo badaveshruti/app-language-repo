@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_action_action_search"
+        android:orderInCategory="100"
+        android:title="@string/abc_search_hint"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nearby"
+        android:icon="@drawable/ic_hospital_rounded"
+        android:orderInCategory="101"
+        android:title="@string/NearBy"
+        android:visible="true"
+        app:showAsAction="always" />
+    <!--<item-->
+    <!--android:id="@+id/action_delete_user"-->
+    <!--app:showAsAction="never"-->
+    <!--android:title="@string/delete_user" />-->
+
+    <item
+        android:id="@+id/download_forms"
+        android:title="@string/downloadforms"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/filefolder"
+        android:icon="@drawable/ic_folder_white"
+        android:orderInCategory="109"
+        android:title="@string/FileFolder"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/workorder_mytask"
+        android:title="@string/workordertask"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/enable_log"
+        android:checkable="true"
+        android:title="@string/enable_log"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/add_new_site"
+        android:icon="@mipmap/ic_action_content_add"
+        android:title="@string/addSite"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/app_preferences"
+        android:title="@string/app_pref"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/user"
+        android:title="@string/Salutation"
+        android:visible="false"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/logout"
+        android:title="@string/Logout"
+        android:visible="false"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/round_corner_light_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <qnopy.com.qnopyandroid.customView.CustomTextViewSemiBold
+            android:id="@+id/tvProjectName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="NA"
+            android:textColor="@color/black_faint"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/ivMenuMore"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <qnopy.com.qnopyandroid.customView.CustomTextViewSemiBold
+            android:id="@+id/tvLocationName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="NA"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toStartOf="@+id/ivMenuMore"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvProjectName" />
+
+        <ImageView
+            android:id="@+id/ivMenuMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvProjectName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvProjectName"
+            app:srcCompat="@drawable/ic_more_horiz" />
+
+        <FrameLayout
+            android:id="@+id/ivStatusBulb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/color_chooser_green"
+            android:paddingBottom="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLocationName">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="17dp"
+                app:srcCompat="@drawable/ic_bulb" />
+
+        </FrameLayout>
+
+        <qnopy.com.qnopyandroid.customView.CustomTextView
+            android:id="@+id/tvLabelStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/status"
+            app:layout_constraintBottom_toBottomOf="@+id/ivStatusBulb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ivStatusBulb"
+            app:layout_constraintTop_toTopOf="@+id/ivStatusBulb" />
+
+        <qnopy.com.qnopyandroid.customView.CustomTextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/round_corner_cyan_bg"
+            android:padding="10dp"
+            android:text="NA"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLabelStatus"
+            app:layout_constraintStart_toEndOf="@+id/tvLabelStatus"
+            app:layout_constraintTop_toTopOf="@+id/tvLabelStatus"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvInnerTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelStatus"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivTick"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_green_border_circle" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivUserPic"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivTick"
+                    app:layout_constraintStart_toEndOf="@+id/ivTick"
+                    app:layout_constraintTop_toTopOf="@+id/ivTick"
+                    app:srcCompat="@drawable/ic_user" />
+
+                <qnopy.com.qnopyandroid.customView.CustomTextView
+                    android:id="@+id/tvInnerTaskTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="NA"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivUserPic"
+                    app:layout_constraintStart_toEndOf="@+id/ivUserPic"
+                    app:layout_constraintTop_toTopOf="@+id/ivUserPic" />
+
+                <qnopy.com.qnopyandroid.customView.CustomTextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/round_corner_blue"
+                    android:drawableStart="@drawable/ic_date_white"
+                    android:drawableLeft="@drawable/ic_date_white"
+                    android:drawablePadding="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="NA"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/ivTick"
+                    app:layout_constraintTop_toBottomOf="@+id/ivUserPic"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <qnopy.com.qnopyandroid.customView.CustomTextView
+                    android:id="@+id/tvInnerStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/round_corner_light_gray"
+                    android:drawableStart="@drawable/grey_dot"
+                    android:drawableLeft="@drawable/grey_dot"
+                    android:paddingStart="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="NA"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvDate"
+                    app:layout_constraintStart_toEndOf="@+id/tvDate"
+                    app:layout_constraintTop_toTopOf="@+id/tvDate" />
+
+                <qnopy.com.qnopyandroid.customView.CustomTextView
+                    android:id="@+id/tvTaskCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:drawableStart="@drawable/ic_task_three_bars"
+                    android:drawableLeft="@drawable/ic_task_three_bars"
+                    android:drawablePadding="5dp"
+                    android:padding="5dp"
+                    android:text="1"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvInnerStatus"
+                    app:layout_constraintStart_toEndOf="@+id/tvInnerStatus"
+                    app:layout_constraintTop_toTopOf="@+id/tvInnerStatus" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSubTasks"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvInnerTask" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

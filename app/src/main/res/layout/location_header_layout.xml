@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+        android:id="@+id/dateTv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent=".15"
+        android:background="@color/color_Gray_mid"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text=" 28 \nDec"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/project_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title" />
+
+    <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="2dp"
+        android:text="Q4 2021 Ground water Sampleing"
+        app:layout_constraintEnd_toStartOf="@+id/ivCloseEvent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/dateTv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.54" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/formName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="2dp"
+        android:text="HA Low flow sampling form"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/project_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="2dp"
+        android:text="DNZ Gas Station."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/formName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@id/formName"
+        app:layout_constraintWidth_percent=".30" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="2dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@id/project_name"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/project_name"
+        app:layout_constraintTop_toTopOf="@id/project_name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/ivCloseEvent"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/moreImg"
+        app:layout_constraintEnd_toStartOf="@+id/moreImg"
+        app:layout_constraintTop_toTopOf="@+id/moreImg"
+        app:srcCompat="@drawable/ic_check_circle" />
+
+    <ImageView
+        android:id="@+id/moreImg"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_more_horiz" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/tvFinalize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Finalize"
+        android:textColor="@color/green_700"
+        android:textSize="9dp"
+        app:layout_constraintEnd_toEndOf="@id/ivCloseEvent"
+        app:layout_constraintStart_toStartOf="@id/ivCloseEvent"
+        app:layout_constraintTop_toBottomOf="@id/ivCloseEvent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

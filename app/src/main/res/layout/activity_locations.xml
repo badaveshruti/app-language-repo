@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".flowWithAdmin.ui.locations_activity.LocationsActivity">
+
+    <include
+        android:id="@+id/locationDetail"
+        layout="@layout/location_header_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        app:layout_constraintTop_toBottomOf="@id/locationDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@color/colorPrimary">
+
+        <qnopy.com.qnopyandroid.customView.CustomEditText
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/container"
+            app:layout_constraintBottom_toBottomOf="@id/container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/edittext_rounded_corner_white"
+            android:drawableStart="@drawable/ic_action_action_search"
+            android:drawableTint="@color/black"
+            android:hint="Search"
+            android:padding="2dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/locationRv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        app:reverseLayout="false"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#F1F1F1"
+        android:backgroundTint="@color/gray_bottom_nav"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/navMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/navFilter"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/mapicon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_map_view_gray"
+                app:layout_constraintBottom_toBottomOf="@id/bottomContainer"
+                app:layout_constraintLeft_toLeftOf="@id/bottomContainer"
+                app:layout_constraintTop_toTopOf="@id/bottomContainer" />
+
+            <qnopy.com.qnopyandroid.customView.CustomTextView
+                android:id="@+id/maptv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Map"
+                android:textSize="11dp"
+                app:layout_constraintBottom_toBottomOf="@id/mapicon"
+                app:layout_constraintLeft_toRightOf="@id/mapicon"
+                app:layout_constraintTop_toTopOf="@id/mapicon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/navFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/navAddLocation"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/navMap"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/filterIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/filter"
+                app:layout_constraintBottom_toBottomOf="@id/bottomContainer"
+                app:layout_constraintLeft_toLeftOf="@id/bottomContainer"
+                app:layout_constraintTop_toTopOf="@id/bottomContainer" />
+
+            <qnopy.com.qnopyandroid.customView.CustomTextView
+                android:id="@+id/filterTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Filter"
+                android:textSize="11dp"
+                app:layout_constraintBottom_toBottomOf="@id/filterIcon"
+                app:layout_constraintLeft_toRightOf="@id/filterIcon"
+                app:layout_constraintTop_toTopOf="@id/filterIcon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/navAddLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/navFilter"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/newLocationIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_location_on_black_24dp"
+                app:layout_constraintBottom_toBottomOf="@id/bottomContainer"
+                app:layout_constraintLeft_toLeftOf="@id/bottomContainer"
+                app:layout_constraintTop_toTopOf="@id/bottomContainer" />
+
+            <qnopy.com.qnopyandroid.customView.CustomTextView
+                android:id="@+id/addtLocationTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Add New\nLocation"
+                android:textSize="11dp"
+                app:layout_constraintBottom_toBottomOf="@id/newLocationIcon"
+                app:layout_constraintLeft_toRightOf="@id/newLocationIcon"
+                app:layout_constraintTop_toTopOf="@id/newLocationIcon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

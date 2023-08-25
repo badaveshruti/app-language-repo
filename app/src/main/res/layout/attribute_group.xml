@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/listTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:textSize="@dimen/list_item_size" />
+
+    <TextView
+        android:id="@+id/textViewNoAttributes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:textColor="@color/color_chooser_black"
+        android:textSize="@dimen/list_item_size"
+        android:layout_marginLeft="30dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/selected_group_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/check_list_item"
+        android:visibility="gone" />
+</LinearLayout>

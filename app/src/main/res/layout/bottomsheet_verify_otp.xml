@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner">
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:id="@+id/tvEnterCellPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Verify cell phone number"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/dividerCellPhone"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E5E5E5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvEnterCellPhone" />
+
+        <qnopy.com.qnopyandroid.customView.CustomTextView
+            android:id="@+id/tvVerifyInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="Enter the 6-digit code we've sent \nto "
+            android:textColor="@color/faint_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dividerCellPhone" />
+
+        <LinearLayout
+            android:id="@+id/llOtpView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvVerifyInfo">
+
+            <qnopy.com.qnopyandroid.customView.CustomEditTextBold
+                android:id="@+id/edtCode1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:contentDescription="Enter 1st digit of code"
+                android:cursorVisible="false"
+                android:inputType="number"
+                android:maxLength="1"
+                android:padding="15dp"
+                android:textColor="@color/qnopy_teal"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <qnopy.com.qnopyandroid.customView.CustomEditTextBold
+                android:id="@+id/edtCode2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:contentDescription="Enter 2nd digit of code"
+                android:cursorVisible="false"
+                android:inputType="number"
+                android:maxLength="1"
+                android:padding="15dp"
+                android:textColor="@color/qnopy_teal"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <qnopy.com.qnopyandroid.customView.CustomEditTextBold
+                android:id="@+id/edtCode3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:contentDescription="Enter 3rd digit of code"
+                android:cursorVisible="false"
+                android:inputType="number"
+                android:maxLength="1"
+                android:padding="15dp"
+                android:textColor="@color/qnopy_teal"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <qnopy.com.qnopyandroid.customView.CustomEditTextBold
+                android:id="@+id/edtCode4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:contentDescription="Enter 4th digit of code"
+                android:cursorVisible="false"
+                android:inputType="number"
+                android:maxLength="1"
+                android:padding="15dp"
+                android:textColor="@color/qnopy_teal"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <qnopy.com.qnopyandroid.customView.CustomEditTextBold
+                android:id="@+id/edtCode5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:contentDescription="Enter 5th digit of code"
+                android:cursorVisible="false"
+                android:inputType="number"
+                android:maxLength="1"
+                android:padding="15dp"
+                android:textColor="@color/qnopy_teal"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <qnopy.com.qnopyandroid.customView.CustomEditTextBold
+                android:id="@+id/edtCode6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:contentDescription="Enter 6th digit of code"
+                android:cursorVisible="false"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="1"
+                android:padding="15dp"
+                android:textColor="@color/qnopy_teal"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <qnopy.com.qnopyandroid.customView.CustomTextView
+            android:id="@+id/tvDidNotReceive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="Didn't receive code?"
+            android:textColor="@color/faint_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llOtpView" />
+
+        <qnopy.com.qnopyandroid.customView.CustomTextView
+            android:id="@+id/tvResendOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="Resend code in 0:00"
+            android:textColor="@color/dark_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDidNotReceive" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/llVerifyCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_corner"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Verify"
+            android:textColor="@color/qnopy_teal"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_corner"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <qnopy.com.qnopyandroid.customView.CustomBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/black_faint"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".flowWithAdmin.ui.adminModule.locations.LocationsFragment">
+
+    <ImageView
+        android:id="@+id/addLocationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.15"
+        app:srcCompat="@drawable/ic_add_solid"
+        app:tint="@color/event_start_blue" />
+
+    <qnopy.com.qnopyandroid.customView.CustomTextView
+        android:id="@+id/addLocationTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical"
+        android:text="Add Location"
+        android:textColor="@color/event_start_blue"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/addLocationButton"
+        app:layout_constraintStart_toEndOf="@+id/addLocationButton"
+        app:layout_constraintTop_toTopOf="@+id/addLocationButton" />
+
+    <ImageView
+        android:id="@+id/ivInfoAddLoc"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_info"
+        app:layout_constraintBottom_toBottomOf="@+id/addLocationTextView"
+        app:layout_constraintStart_toEndOf="@+id/addLocationTextView"
+        app:layout_constraintTop_toTopOf="@+id/addLocationTextView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/projectLocationRv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addLocationButton"
+        app:reverseLayout="false" />
+
+    <qnopy.com.qnopyandroid.customView.CustomItalicTextView
+        android:id="@+id/tvNoForms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="You don't have \nany locations created.."
+        android:textColor="@color/black_faint"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

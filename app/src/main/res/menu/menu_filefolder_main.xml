@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.qnopy.qnopy.ui.FilefolderMainActivity">
+    <item
+        android:id="@+id/action_sync"
+        android:orderInCategory="100"
+        android:icon="@android:drawable/stat_notify_sync"
+        android:title="@string/action_sync"
+        app:showAsAction="ifRoom" />
+</menu>

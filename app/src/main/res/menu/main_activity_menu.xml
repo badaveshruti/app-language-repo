@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_trial"
+        android:icon="@drawable/ic_trial_badge"
+        android:title="Trial"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/itemSearchProject"
+        android:icon="@drawable/ic_search_white"
+        android:title="Search Project"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/itemLiveFeed"
+        android:icon="@drawable/ic_live_feed"
+        android:visible="false"
+        android:title="Feed"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/sync_data"
+        android:icon="@drawable/ic_sync_badge"
+        android:title="sync"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_new_task"
+        android:icon="@drawable/add_post_qnote"
+        android:orderInCategory="102"
+        android:title="@string/add_new_task"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_task_view"
+        android:icon="@drawable/ic_task_view"
+        android:orderInCategory="101"
+        android:title="Task list view"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_task_map_view"
+        android:icon="@drawable/ic_map_view"
+        android:orderInCategory="101"
+        android:title="Task map view"
+        android:visible="false"
+        app:showAsAction="always" />
+</menu>

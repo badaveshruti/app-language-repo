@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="2"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lovitemtitle_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:paddingLeft="16dp"
+            android:paddingRight="2dp"
+            android:textSize="@dimen/list_item_size"
+            android:textStyle="bold"
+            android:paddingStart="16dp"
+            android:paddingEnd="2dp" />
+
+        <TextView
+            android:id="@+id/lovdisplaytitle_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Title Value"
+            android:paddingLeft="16dp"
+            android:paddingRight="2dp"
+            android:textColor="@color/light_blue"
+            android:textColorHint="@color/light_blue"
+            android:textSize="16sp"
+            android:paddingStart="16dp"
+            android:paddingEnd="2dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/deletelov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/qnopy_gallery_delete_icon"
+        android:visibility="visible"
+        android:layout_marginStart="15dp" />
+
+    <ImageView
+        android:id="@+id/edit_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/pen"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="15dp" />
+
+
+
+</LinearLayout>

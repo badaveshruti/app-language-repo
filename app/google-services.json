@@ -1,0 +1,101 @@
+{
+  "project_info": {
+    "project_number": "221330330684",
+    "firebase_url": "https://qnopy-firebase.firebaseio.com",
+    "project_id": "qnopy-firebase",
+    "storage_bucket": "qnopy-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221330330684:android:ff5c5a234d41f585",
+        "android_client_info": {
+          "package_name": "com.aqua.fieldbuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "221330330684-b55lpvql575b1ocg8l15t3rmfp1ofe0n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aqua.fieldbuddy",
+            "certificate_hash": "b4de1142b34dcd48b4dc85878c2ccf4a16658465"
+          }
+        },
+        {
+          "client_id": "221330330684-lo9rulmkcn5vtl504d6ogmn33uu32ovu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aqua.fieldbuddy",
+            "certificate_hash": "ee8595c8621ef8c4519842e9249dea80a2930f6b"
+          }
+        },
+        {
+          "client_id": "221330330684-8hpkimqlpjs1qh15itln3mos3iv88ok1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgpqZe1gQpuAWrH70zSXnVTbuoJPcYifQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "221330330684-8hpkimqlpjs1qh15itln3mos3iv88ok1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221330330684:android:4d1d9c519f47c739",
+        "android_client_info": {
+          "package_name": "qnopy.com.qnopyandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "221330330684-99ghh2537aca9go5akvjflk86567jemb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "qnopy.com.qnopyandroid",
+            "certificate_hash": "b4de1142b34dcd48b4dc85878c2ccf4a16658465"
+          }
+        },
+        {
+          "client_id": "221330330684-mcl7ptbdmr3uboevtp216s1so34kp13e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "qnopy.com.qnopyandroid",
+            "certificate_hash": "ee8595c8621ef8c4519842e9249dea80a2930f6b"
+          }
+        },
+        {
+          "client_id": "221330330684-8hpkimqlpjs1qh15itln3mos3iv88ok1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgpqZe1gQpuAWrH70zSXnVTbuoJPcYifQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "221330330684-8hpkimqlpjs1qh15itln3mos3iv88ok1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

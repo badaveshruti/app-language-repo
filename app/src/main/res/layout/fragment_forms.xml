@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayoutForms"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:tag="Forms"
+    tools:context=".flowWithAdmin.ui.adminModule.forms.FormsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivGetForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.15"
+            app:srcCompat="@drawable/ic_add_solid"
+            app:tint="@color/event_start_blue" />
+
+        <qnopy.com.qnopyandroid.customView.CustomTextView
+            android:id="@+id/tvGetNewForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="center_vertical"
+            android:text="Get New Form"
+            android:textColor="@color/event_start_blue"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivGetForm"
+            app:layout_constraintStart_toEndOf="@+id/ivGetForm"
+            app:layout_constraintTop_toTopOf="@+id/ivGetForm" />
+
+        <ImageView
+            android:id="@+id/ivInfoGetNew"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="@+id/tvGetNewForm"
+            app:layout_constraintStart_toEndOf="@+id/tvGetNewForm"
+            app:layout_constraintTop_toTopOf="@+id/tvGetNewForm" />
+
+        <qnopy.com.qnopyandroid.customView.CustomEditText
+            android:id="@+id/edtSearchForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edittext_rounded_corner"
+            android:drawableStart="@mipmap/search_icon"
+            android:drawablePadding="5dp"
+            android:hint="Search form"
+            android:imeOptions="actionDone"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivGetForm" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvForms"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/gray_damn_light"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtSearchForm" />
+
+        <qnopy.com.qnopyandroid.customView.CustomItalicTextView
+            android:id="@+id/tvNoForms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:text="No forms assigned.. \nClick on Get new form to assign forms"
+            android:textColor="@color/black_faint"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@id/rvForms"
+            app:layout_constraintEnd_toEndOf="@+id/rvForms"
+            app:layout_constraintStart_toStartOf="@+id/rvForms"
+            app:layout_constraintTop_toTopOf="@+id/rvForms" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

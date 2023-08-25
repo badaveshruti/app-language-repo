@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_damn_light"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.locations.LocationActivity"
+    tools:showIn="@layout/location_ux">
+
+    <include
+        android:id="@+id/eventLL"
+        layout="@layout/event_layout" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/gray_damn_light"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <qnopy.com.qnopyandroid.customView.CustomEditText
+            android:id="@+id/edtSearchLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableStart="@mipmap/search"
+            android:drawableEnd="@drawable/ic_qr_code_scanner"
+            android:drawablePadding="4dp"
+            android:hint="Search location"
+            android:imeOptions="actionSearch"
+            android:padding="8dp"
+            android:textColor="@color/black_faint" />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/MyTheme.AppBarOverlay"
+        app:elevation="0dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/location_attribute_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/selected_location_attribute_msg"
+            android:textSize="@dimen/list_item_size"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/empty_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="false"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/no_field_points"
+            android:textSize="@dimen/list_item_size" />
+
+        <ListView
+            android:id="@+id/locListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/location_bottom_ll"
+            android:layout_below="@id/location_attribute_header"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="true"
+            android:scrollbars="none"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLocations"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/location_bottom_ll"
+            android:layout_below="@id/location_attribute_header"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <ProgressBar
+            android:id="@+id/pbLocations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/location_bottom_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@mipmap/list_bottom_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp">
+
+            <ImageView
+                android:id="@+id/list_mapview_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/list_mapview_icon" />
+
+            <TextView
+                android:id="@+id/switch_map_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:text="@string/tap_to_see_map_view"
+                android:textSize="@dimen/bottom_item_size" />
+
+            <ImageView
+                android:id="@+id/filter_ib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/filter"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/sortLocationList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/ic_sort_black_32dp" />
+
+            <ImageView
+                android:id="@+id/geoSearch"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:background="@mipmap/search_geo"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/multiple_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/location_bottom_ll"
+            android:layout_alignParentEnd="true"
+            app:fab_addButtonColorNormal="@color/qnopy_teal"
+            app:fab_addButtonColorPressed="@color/white_pressed"
+            app:fab_addButtonPlusIconColor="@color/btn_selected_bg"
+            app:fab_labelStyle="@style/menu_labels_style">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_print_coc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:fab_addButtonSize="mini"
+                app:fab_colorNormal="@color/qnopy_teal"
+                app:fab_colorPressed="@color/white_pressed"
+                app:fab_icon="@drawable/ic_print_white"
+                app:fab_title="@string/print_coc_caps" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_print_labels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:fab_addButtonSize="mini"
+                app:fab_colorNormal="@color/qnopy_teal"
+                app:fab_colorPressed="@color/white_pressed"
+                app:fab_icon="@drawable/ic_print_white"
+                app:fab_title="@string/print_labels_caps" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_mobileReportRequired"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:fab_addButtonSize="mini"
+                app:fab_colorNormal="@color/qnopy_teal"
+                app:fab_colorPressed="@color/white_pressed"
+                app:fab_icon="@drawable/report_view"
+                app:fab_title="@string/download_report" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_mobilereport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:fab_addButtonSize="mini"
+                app:fab_colorNormal="@color/qnopy_teal"
+                app:fab_colorPressed="@color/white_pressed"
+                app:fab_icon="@drawable/report_view"
+                app:fab_title="@string/event_report" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabSendReportToPM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:fab_addButtonSize="mini"
+                app:fab_colorNormal="@color/qnopy_teal"
+                app:fab_colorPressed="@color/white_pressed"
+                app:fab_icon="@drawable/report_view"
+                app:fab_title="@string/email_logs" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_addnew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_addButtonSize="mini"
+                app:fab_colorNormal="@color/qnopy_teal"
+                app:fab_colorPressed="@color/white_pressed"
+                app:fab_icon="@mipmap/new_location"
+                app:fab_title="@string/add_locations_upper_case" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:fab_addButtonSize="mini"
+                app:fab_colorNormal="@color/qnopy_teal"
+                app:fab_colorPressed="@color/white_pressed"
+                app:fab_icon="@drawable/sync"
+                app:fab_title="@string/upload_data_photos" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_closeevent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_addButtonSize="mini"
+                app:fab_colorNormal="@color/qnopy_teal"
+                app:fab_colorPressed="@color/white_pressed"
+                app:fab_icon="@drawable/submit"
+                app:fab_title="@string/end_data_entry" />
+
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    </RelativeLayout>
+
+    <include layout="@layout/location_sort" />
+
+</LinearLayout>
